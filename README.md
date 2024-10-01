@@ -6,7 +6,7 @@ This website allows members of OSC to play interactive games for FREE!
 
 ## Website Link
 
-To see the website, navigate to this link: ___
+To see the website, navigate to this link: COMING SOON
 
 ## Credits 
 
