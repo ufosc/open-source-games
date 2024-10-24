@@ -101,16 +101,16 @@ import Image from "next/image";
 // }
 // app/page.tsx
 
-import MinesGame from '../components/minesGame';
+import MinesGame from '../games/minesGame';
 import '../app/globals.css';
 
-const HomePage: React.FC = () => {
+export default function Home(){
   return (
     <div>
-      <h1>Mines Game</h1>
+      <h1 className="flex justify-center">Mines Game</h1>
       <MinesGame />
     </div>
   );
 };
 
-export default HomePage;
+

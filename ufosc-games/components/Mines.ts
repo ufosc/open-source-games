@@ -1,4 +1,3 @@
-
 export interface Cell {
     isMine: boolean;
     isRevealed: boolean;

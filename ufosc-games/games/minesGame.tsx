@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { createBoard, Cell } from '../lib/Mines';
+import { createBoard, Cell } from '../components/Mines';
 import '../app/globals.css';
 
 
@@ -48,11 +48,13 @@ const MinesGame: React.FC = () => {
   };
 
   return (
-    <div>
-      {gameState.gameOver && (
-        <p>{gameState.safeCellsRevealed === rows * cols - mineCount ? 'You Win!' : 'Game Over'}</p>
-      )}
-      <div className="grid grid-cols-5 gap-5">
+    <div className="flex justify-center place-content-center content-center">
+      <div className="flex justify-center content-center">
+        {gameState.gameOver && (
+          <p>{gameState.safeCellsRevealed === rows * cols - mineCount ? 'You Win!' : 'Game Over'}</p>
+        )}
+      </div>
+      <div className="grid gap-5 grid-cols-5 place-content-center content-center">
         {gameState.board.map((row, rowIndex) => (
           <div key={rowIndex} className="row">
             {row.map((cell, colIndex) => (
