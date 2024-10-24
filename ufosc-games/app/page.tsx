@@ -101,7 +101,8 @@ import Image from "next/image";
 // }
 // app/page.tsx
 
-import MinesGame from '../Components/minesGame';
+import MinesGame from '../components/minesGame';
+import '../app/globals.css';
 
 const HomePage: React.FC = () => {
   return (

@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from 'react';
 import { createBoard, Cell } from '../lib/Mines';
+import '../app/globals.css';
 
-// TypeScript interface for the game state
+
 interface GameState {
   board: Cell[][];
   mines: number;
@@ -51,7 +52,7 @@ const MinesGame: React.FC = () => {
       {gameState.gameOver && (
         <p>{gameState.safeCellsRevealed === rows * cols - mineCount ? 'You Win!' : 'Game Over'}</p>
       )}
-      <div className="board">
+      <div className="grid grid-cols-5 gap-5">
         {gameState.board.map((row, rowIndex) => (
           <div key={rowIndex} className="row">
             {row.map((cell, colIndex) => (
